@@ -1,13 +1,6 @@
-def selection_sort(arr):
-    n = len(arr)
-    for i in range(n):
-        min_index = i
-        for j in range(i+1, n):
-            if arr[j] < arr[min_index]:
-                min_index = j
-        arr[i], arr[min_index] = arr[min_index], arr[i]
-    return arr
+def is_palindrome(s):
+    return s == s[::-1]
 
 # Example usage
-arr = [64, 25, 12, 22, 11]
-print("Sorted array:", selection_sort(arr))
+s = "madam"
+print(f"{s} is a palindrome" if is_palindrome(s) else f"{s} is not a palindrome")
